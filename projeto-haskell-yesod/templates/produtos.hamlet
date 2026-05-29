@@ -1,0 +1,30 @@
+<section .section-head>
+  <p .eyebrow>Catalogo
+  <h1>Lista de produtos
+  <p>Produtos cadastrados no banco de dados via Persistent.
+
+$if null produtos
+  <section .empty-state>
+    <h2>Nenhum produto cadastrado
+    <p>Cadastre o primeiro item para visualizar a tabela.
+    <a .button .primary href=@{ProdutoNewR}>Cadastrar produto
+$else
+  <section .table-shell>
+    <table>
+      <thead>
+        <tr>
+          <th>Nome
+          <th>Categoria
+          <th>Preco
+          <th>Acoes
+      <tbody>
+        $forall Entity produtoId produto <- produtos
+          <tr>
+            <td>#{produtoNome produto}
+            <td>
+              <span .tag>#{produtoCategoria produto}
+            <td>R$ #{showPreco (produtoPreco produto)}
+            <td .actions-cell>
+              <a .button .small href=@{ProdutoR produtoId}>Detalhes
+              <form method=post action=@{ProdutoDeleteR produtoId}>
+                <button .button .danger .small type="submit">Deletar

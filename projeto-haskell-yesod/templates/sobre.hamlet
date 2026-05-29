@@ -1,0 +1,43 @@
+<section .section-head>
+  <p .eyebrow>Base teorica
+  <h1>Sobre o projeto
+  <p>Explicacao simples para apresentacao academica.
+
+<section .prose>
+  <h2>O que sao Type Families?
+  <p>
+    Type Families sao um recurso do Haskell que permite definir uma funcao no
+    nivel dos tipos. Em vez de calcular valores em tempo de execucao, elas
+    ajudam o compilador a escolher tipos relacionados durante a compilacao.
+
+  <h2>Como o TypeStore usa Type Families?
+  <p>
+    O modulo <code>TypeFamilies.Categorias</code> define
+    <code>type family CategoriaInfo a</code>. Para cada categoria existe um tipo
+    associado: Computador usa <code>String</code>, VideoGame usa <code>Int</code>
+    e Periferico usa <code>Bool</code>.
+
+  <div .type-grid>
+    $forall exemplo <- exemplos
+      <article .type-card>
+        <h3>#{resumoNome exemplo}
+        <p><strong>Tipo associado:</strong> #{resumoTipoAssociado exemplo}
+        <p>#{resumoValor exemplo}
+
+  <h2>Por que isso e polimorfismo?
+  <p>
+    A mesma funcao de resumo trabalha com tipos diferentes. O comportamento e o
+    tipo da informacao mudam conforme a categoria, mas a interface continua
+    unica. Isso mostra polimorfismo com seguranca de tipos.
+
+  <h2>Integracao com Yesod
+  <p>
+    Yesod cuida das rotas, handlers, formularios e templates. Persistent cuida
+    do banco SQLite e das migrations. A tela de categorias usa dados reais do
+    banco e tambem apresenta os valores calculados pelo modulo de Type Families.
+
+  <h2>Vantagens
+  <ul>
+    <li>Erros de tipo sao encontrados durante a compilacao.
+    <li>O codigo expressa melhor as regras do dominio.
+    <li>A aplicacao fica mais segura e mais facil de explicar.

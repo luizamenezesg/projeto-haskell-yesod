@@ -1,0 +1,8 @@
+/                         HomeR           GET
+/produto/new              ProdutoNewR     GET POST
+/produtos                 ProdutosR       GET
+/produto/#ProdutoId       ProdutoR        GET
+/produto/#ProdutoId/delete ProdutoDeleteR POST
+/categorias               CategoriasR     GET
+/sobre                    SobreR          GET
+/static                   StaticR         Static getStatic

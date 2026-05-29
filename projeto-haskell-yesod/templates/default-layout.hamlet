@@ -1,0 +1,27 @@
+$doctype 5
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>#{pageTitle pc}
+    ^{pageHead pc}
+  <body>
+    <header .topbar>
+      <nav .nav>
+        <a .brand href=@{HomeR}>TypeStore
+        <button #menu-toggle .menu-toggle type="button" aria-label="Abrir menu">Menu
+        <div #menu-links .menu-links>
+          <a href=@{HomeR}>Home
+          <a href=@{ProdutoNewR}>Cadastrar
+          <a href=@{ProdutosR}>Produtos
+          <a href=@{CategoriasR}>Categorias
+          <a href=@{SobreR}>Sobre
+
+    $maybe msg <- mmsg
+      <div .flash>#{msg}
+
+    <main .page>
+      ^{pageBody pc}
+
+    <footer .footer>
+      <p>TypeStore - Projeto academico em Haskell, Yesod, SQLite e Type Families.

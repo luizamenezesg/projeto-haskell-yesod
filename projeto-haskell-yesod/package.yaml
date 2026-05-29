@@ -1,0 +1,74 @@
+name: typestore
+version: 0.1.0.0
+github: "faculdade/typestore"
+license: MIT
+author: "TypeStore"
+maintainer: "aluno@example.com"
+copyright: "2026"
+
+extra-source-files:
+- README.md
+- config/routes
+- templates/*.hamlet
+- templates/*.lucius
+- templates/*.julius
+
+description: Projeto academico em Haskell/Yesod sobre Type Families.
+
+dependencies:
+- base >= 4.7 && < 5
+- aeson
+- bytestring
+- classy-prelude
+- conduit
+- directory
+- fast-logger
+- http-client-tls
+- monad-logger
+- persistent
+- persistent-sqlite
+- persistent-template
+- shakespeare
+- text
+- time
+- wai
+- wai-extra
+- wai-logger
+- warp
+- yaml
+- yesod
+- yesod-core
+- yesod-form
+- yesod-static
+
+default-extensions:
+- NoImplicitPrelude
+- OverloadedStrings
+- TemplateHaskell
+- QuasiQuotes
+- TypeFamilies
+- MultiParamTypeClasses
+- GADTs
+- GeneralizedNewtypeDeriving
+- DeriveGeneric
+- FlexibleContexts
+- FlexibleInstances
+- ViewPatterns
+- EmptyDataDecls
+
+library:
+  source-dirs: src
+  ghc-options:
+  - -Wall
+
+executables:
+  typestore:
+    main: main.hs
+    source-dirs: app
+    ghc-options:
+    - -Wall
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - typestore

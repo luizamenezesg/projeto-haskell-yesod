@@ -1,0 +1,11 @@
+<section .section-head>
+  <p .eyebrow>Cadastro
+  <h1>Novo produto
+  <p>Preencha os dados do item para salva-lo no banco SQLite.
+
+<section .form-shell>
+  <form method=post action=@{ProdutoNewR} enctype=#{enctype}>
+    ^{widget}
+    <div .form-actions>
+      <button .button .primary type="submit">Salvar produto
+      <a .button href=@{ProdutosR}>Cancelar

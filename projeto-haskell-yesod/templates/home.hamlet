@@ -1,0 +1,36 @@
+<section .hero>
+  <div .hero-copy>
+    <p .eyebrow>Programacao Funcional / Haskell
+    <h1>TypeStore
+    <p>
+      Catalogo academico de eletronicos e games desenvolvido com Haskell,
+      Yesod, Persistent e SQLite para demonstrar Type Families em uma
+      aplicacao web funcional.
+    <div .actions>
+      <a .button .primary href=@{ProdutoNewR}>Cadastrar produto
+      <a .button href=@{SobreR}>Ver explicacao
+
+<section .grid-3>
+  <article .card>
+    <h2>Haskell
+    <p>
+      Linguagem funcional com tipagem estatica forte, funcoes puras e
+      composicao como forma principal de organizar programas.
+  <article .card>
+    <h2>Yesod
+    <p>
+      Framework web Haskell type-safe. As rotas e handlers sao verificados em
+      tempo de compilacao, reduzindo erros comuns de aplicacoes web.
+  <article .card>
+    <h2>Type Families
+    <p>
+      Recurso que permite associar tipos diferentes a categorias diferentes,
+      funcionando como uma funcao no nivel dos tipos.
+
+<section .panel>
+  <h2>O que este sistema demonstra?
+  <ul .feature-list>
+    <li>CRUD simples de produtos usando handlers GET e POST.
+    <li>Persistencia em SQLite com migrations automaticas do Persistent.
+    <li>Templates Hamlet, estilo Lucius e comportamento Julius.
+    <li>Uso real de Type Families na tela de categorias.

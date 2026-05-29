@@ -1,0 +1,19 @@
+<section .section-head>
+  <p .eyebrow>Filtro
+  <h1>Produtos por categoria
+  <p>Produtos separados em Computador, VideoGame e Periferico.
+
+<section .panel>
+  <h2>Type Families aplicadas
+  <p>#{explicacao}
+  <div .type-grid>
+    $forall exemplo <- exemplos
+      <article .type-card>
+        <h3>#{resumoNome exemplo}
+        <p><strong>CategoriaInfo:</strong> #{resumoTipoAssociado exemplo}
+        <p>#{resumoValor exemplo}
+
+<section .category-grid>
+  ^{categoriaBloco "Computador" computadores}
+  ^{categoriaBloco "VideoGame" videoGames}
+  ^{categoriaBloco "Periferico" perifericos}

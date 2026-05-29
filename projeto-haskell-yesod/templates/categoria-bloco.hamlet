@@ -1,0 +1,10 @@
+<article .category-block>
+  <h2>#{titulo}
+  $if null produtos
+    <p>Nenhum produto nesta categoria.
+  $else
+    <ul>
+      $forall Entity produtoId produto <- produtos
+        <li>
+          <a href=@{ProdutoR produtoId}>#{produtoNome produto}
+          <span .muted> - R$ #{showPreco (produtoPreco produto)}

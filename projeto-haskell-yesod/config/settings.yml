@@ -1,0 +1,6 @@
+database:
+  database: typestore.sqlite3
+  poolsize: 10
+
+host: "*4"
+port: 3000

@@ -1,0 +1,20 @@
+<section .section-head>
+  <p .eyebrow>Detalhes
+  <h1>#{produtoNome produto}
+  <p>Informacoes completas do produto selecionado.
+
+<section .detail-card>
+  <dl>
+    <div>
+      <dt>Categoria
+      <dd>#{produtoCategoria produto}
+    <div>
+      <dt>Preco
+      <dd>R$ #{showPreco (produtoPreco produto)}
+    <div>
+      <dt>Descricao
+      <dd>#{produtoDescricao produto}
+  <div .actions>
+    <a .button href=@{ProdutosR}>Voltar
+    <form method=post action=@{ProdutoDeleteR produtoId}>
+      <button .button .danger type="submit">Deletar
